@@ -1,0 +1,20 @@
+Question 1 : Consider list of tuples List ((1,"name1",2000.0),(2,"name2",50000.5),(3,"name3",50000.75),(4,"name4",40000.75),(5,"name5",50000.60)) transform into a list every name filled with uppercase & provide 10% bonus on the salary if salary is greater than 10000.00.
+
+Solution:
+val listEmp = ((1,"name1",2000.0),(2,"name2",3000.50),(3,"name3",50000.75),(4,"name4",40000.75),(5,"name5",50000.60))
+
+val listTransformed = ((listEmp._1._1, listEmp._1._2.toUpperCase, (listEmp._1._3 > 10000.00) match 
+{ case true => (listEmp._1._3 + (listEmp._1._3 * 0.1))
+  case false => (listEmp._1._3)}), 
+(listEmp._2._1, listEmp._2._2.toUpperCase, (listEmp._2._3 > 10000.00) match 
+{ case true => (listEmp._2._3 + (listEmp._2._3 * 0.1)) 
+  case false => (listEmp._2._3)}),
+(listEmp._3._1, listEmp._3._2.toUpperCase, (listEmp._3._3 > 10000.00) match 
+{ case true => (listEmp._3._3 + (listEmp._3._3 * 0.1)) 
+  case false => (listEmp._3._3)}), 
+(listEmp._4._1, listEmp._4._2.toUpperCase, (listEmp._4._3 > 10000.00) match 
+{ case true => (listEmp._4._3 + (listEmp._4._3 * 0.1)) case false => (listEmp._4._3)}), 
+(listEmp._5._1, listEmp._5._2.toUpperCase, (listEmp._5._3 > 10000.00) match 
+{ case true => (listEmp._5._3 + (listEmp._5._3 * 0.1)) case false => (listEmp._5._3)}))
+
+
